@@ -27,7 +27,7 @@ export default class LoginLayout extends React.Component{
     constructor(props:any){
         super(props)
     }
-    render(): any {
+    render(): React.ReactNode {
         const emailChanged=(event:React.FormEvent<HTMLInputElement>)=>{
             const value=(event.target as HTMLInputElement).value
             this.setState({formValue : {email:{value:value,errorMessage:emailValidator(value).message},password:{value:this.state.formValue.password.value,errorMessage:this.state.formValue.password.errorMessage}}})
